@@ -1,0 +1,42 @@
+name: Java Tests with Maven
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '11'
+
+    - name: Cache Maven dependencies
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.m2/repository
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-
+
+    - name: Run Maven tests
+      run: mvn clean test
+
+    - name: Generate Allure report
+      run: mvn allure:report
+
+    - name: Upload Allure report artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: allure-report
+        path: target/site/allure-report
