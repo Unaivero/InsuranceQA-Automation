@@ -1,0 +1,4 @@
+username,password,role
+admin.test,devpassword123,admin
+user.regular,regularpass456,user
+user.readonly,readonlypass789,readonly

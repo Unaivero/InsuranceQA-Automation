@@ -1,0 +1,11 @@
+PolicyID,PolicyType,StartDate,EndDate,Premium,CustomerName,CustomerEmail,Status
+POL-1001,Auto,2024-01-01,2025-01-01,1200.50,John Smith,john.smith@example.com,Active
+POL-1002,Home,2024-02-15,2025-02-15,850.75,Jane Doe,jane.doe@example.com,Active
+POL-1003,Life,2023-11-10,2024-11-10,1500.00,Robert Johnson,robert.j@example.com,Active
+POL-1004,Health,2024-03-20,2025-03-20,2100.25,Emily Williams,emily.w@example.com,Active
+POL-1005,Commercial,2024-01-15,2025-01-15,3500.00,Business Solutions Inc,contact@bsinc.example.com,Active
+POL-1006,Travel,2024-05-01,2024-06-01,150.00,Michael Brown,michael.b@example.com,Active
+POL-1007,Pet,2024-02-28,2025-02-28,450.75,Sarah Miller,sarah.m@example.com,Active
+POL-1008,Auto,2023-10-15,2024-10-15,1100.00,David Wilson,david.w@example.com,Active
+POL-1009,Home,2024-04-10,2025-04-10,920.50,Amanda Taylor,amanda.t@example.com,Active
+POL-1010,Life,2023-12-05,2024-12-05,1800.25,Richard Davis,richard.d@example.com,Active

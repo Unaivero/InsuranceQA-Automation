@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Active Policies Dashboard Test Suite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="com.activepolicies.dashboard.listeners.TestListener"/>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+    
+    <!-- UI Tests -->
+    <test name="Login Tests">
+        <classes>
+            <class name="com.activepolicies.dashboard.tests.LoginTests"/>
+        </classes>
+    </test>
+    
+    <test name="Filter Tests">
+        <classes>
+            <class name="com.activepolicies.dashboard.tests.FilterTests"/>
+        </classes>
+    </test>
+    
+    <test name="Export Tests">
+        <classes>
+            <class name="com.activepolicies.dashboard.tests.ExportTests"/>
+        </classes>
+    </test>
+    
+    <test name="Visual Tests">
+        <classes>
+            <class name="com.activepolicies.dashboard.tests.VisualTests"/>
+        </classes>
+    </test>
+    
+    <!-- API Tests -->
+    <test name="API Tests">
+        <classes>
+            <class name="com.activepolicies.dashboard.tests.api.PolicyApiTests"/>
+        </classes>
+    </test>
+    
+    <!-- Database Tests -->
+    <test name="Database Tests">
+        <classes>
+            <class name="com.activepolicies.dashboard.tests.db.PolicyDatabaseTests"/>
+        </classes>
+    </test>
+</suite>
